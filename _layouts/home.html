@@ -15,7 +15,7 @@ layout: default
         <span class="post-meta">{{ post.date | date: date_format }}</span>
         <a class="post-link" href="{{ post.url | relative_url }}">
           <p>{{ post.title | escape }}</p>
-          <img src="/assets{{ post.path | relative_url | replace: '_posts', '' | replace: '.md','' }}/cover.jpg" width="360" />
+          <img src="{{ post.path | prepend: '/assets' | relative_url | replace: '_posts', '' | replace: '.md','' }}/cover.jpg" width="360" />
         </a>
       </li>
     {% endfor %}
