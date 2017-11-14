@@ -16,8 +16,8 @@
 title: David Gouveia
 email: admin@david-gouveia.com
 description: ""
-baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: https://davidluzgouveia.github.io/blog # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: http://www.david-gouveia.com # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: davidluzgouveia
 github_username:  davidluzgouveia
 
