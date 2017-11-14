@@ -4,9 +4,9 @@ title: Rendering Mathematical Functions in XNA
 date: 2011-03-24
 ---
 
-While working on part II of my [Creating a Basic Synth in XNA](/creating-a-basic-synth-in-xna-part-i) series I thought it would be interesting to have some way to show a visual representation of the sound waves that we'll be creating. Therefore I set out today to create a little component that does exactly that - render a graphic of some mathematical function - and which I'd like to share for educational purposes. Here's the sort of image it produces:
+While working on part II of my [Creating a Basic Synth in XNA]({{ "/creating-a-basic-synth-in-xna-part-i" | relative_url }}) series I thought it would be interesting to have some way to show a visual representation of the sound waves that we'll be creating. Therefore I set out today to create a little component that does exactly that - render a graphic of some mathematical function - and which I'd like to share for educational purposes. Here's the sort of image it produces:
 
-![Sine Wave](/assets/2011-03-24-rendering-mathematical-functions-in-xna/sine-300x177.png)
+![Sine Wave]({{ "/assets/2011-03-24-rendering-mathematical-functions-in-xna/sine-300x177.png" | relative_url }})
 
 However, please bear in my mind that my goal wasn't to make it as flexible as possible but rather to make it work with the examples I needed. Because of that you definetly shouldn't think of it as a general purpose renderer for any mathematical function, as there are numerous limitations that I chose not to address (such as dealing with values outside the chosen range and non-continuous functions).
 
@@ -140,7 +140,7 @@ With that, when I wanted to change the amplitude or frequency of the wave all I 
 
 ## Sample
 
-You can see the sample in action in the video below, or download the source code and play with it yourself. Also, look forward to part II of my [Creating a Basic Synth in XNA](/creating-a-basic-synth-in-xna-part-i) series in the next couple of days!
+You can see the sample in action in the video below, or download the source code and play with it yourself. Also, look forward to part II of my [Creating a Basic Synth in XNA]({{ "/creating-a-basic-synth-in-xna-part-i" | relative_url }}) series in the next couple of days!
 
 <iframe width="420" height="315" src="//www.youtube.com/embed/L7gNC9qQ8Ek?rel=0" frameborder="0" allowfullscreen=""></iframe>
 

@@ -4,7 +4,7 @@ title: Scrolling Textures with Zoom and Rotation
 date: 2011-09-20
 ---
 
-I've already written twice before ([here](/scrolling-textures-in-xna) and [here](/2d-camera-with-parallax-scrolling-in-xna)) about a way to make a texture seem to repeat itself infinitely in every direction as you moved your camera around, all with a single draw instruction. That can be very useful in a number of game scenarios, such as creating a spacefield background for a spaceship shooter type of game.
+I've already written twice before ([here]({{ "/scrolling-textures-in-xna" | relative_url }}) and [here]({{ "/2d-camera-with-parallax-scrolling-in-xna" | relative_url }})) about a way to make a texture seem to repeat itself infinitely in every direction as you moved your camera around, all with a single draw instruction. That can be very useful in a number of game scenarios, such as creating a spacefield background for a spaceship shooter type of game.
 
 That technique relied on the graphic's card wrap texture addressing mode to do the wrapping automatically for you, while the spritebatch's source and destination rectangles were used to to move (changing the source rectangle position) or zoom (change the source rectangle size in relation to destination rectangle) the camera. But it still had the problems that it didn't support rotation (setting the rotation on SpriteBatch.value would cause the entire quad to rotate, not just the content) or respect the camera's origin.
 

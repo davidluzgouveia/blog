@@ -18,9 +18,9 @@ There you have it. So, there are actually many different ways to achieve this ef
 
 ## Method 1 - Scrolling Textures
 
-If you want to implement parallax scrolling entirely with repeating textures, then the easiest way is to use the technique described in my earlier article called [Scrolling Textures in XNA](/scrolling-textures-in-xna). This is useful for instance to create starfields or 2D skies, but not as useful for games where the background needs to change constantly.
+If you want to implement parallax scrolling entirely with repeating textures, then the easiest way is to use the technique described in my earlier article called [Scrolling Textures in XNA]({{ "/scrolling-textures-in-xna" | relative_url }}). This is useful for instance to create starfields or 2D skies, but not as useful for games where the background needs to change constantly.
 
-So let's say you have three textures (texture1, texture2 and texture3) that you want to draw on top of each other and scroll them at different speeds. All you have to do is use the [technique I described](/scrolling-textures-in-xna) passing your camera position as your texture's scroll position, and multiplying each of them by a different constant (e.g. 1.0f would mean full speed, 0.5f half speed, 2.0f double speed, etc.). Example below:
+So let's say you have three textures (texture1, texture2 and texture3) that you want to draw on top of each other and scroll them at different speeds. All you have to do is use the [technique I described]({{ "/scrolling-textures-in-xna" | relative_url }}) passing your camera position as your texture's scroll position, and multiplying each of them by a different constant (e.g. 1.0f would mean full speed, 0.5f half speed, 2.0f double speed, etc.). Example below:
 
 ~~~ c#
 spriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.LinearWrap, null, null);
@@ -30,11 +30,11 @@ spriteBatch.Draw(texture3, position, new Rectangle(cameraX * 1.0f, cameraY * 1.0
 spriteBatch.End();
 ~~~
 
-That's all there is to it! And in case you didn't notice, the video sample of my [Scrolling Textures in XNA](/scrolling-textures-in-xna) article already had parallax scrolling in it - there are in fact three layers of clouds moving at different speeds - although the effect is very subtle!
+That's all there is to it! And in case you didn't notice, the video sample of my [Scrolling Textures in XNA]({{ "/scrolling-textures-in-xna" | relative_url }}) article already had parallax scrolling in it - there are in fact three layers of clouds moving at different speeds - although the effect is very subtle!
 
 <iframe width="420" height="315" src="//www.youtube.com/embed/Ly7SJeiirhU?rel=0" frameborder="0" allowfullscreen></iframe>
 
-> Update: I wrote a new article about this topic which lets you use zoom and rotation at the same time as scrolling the background infinitely. Check it out [here](/scrolling-textures-with-zoom-and-rotation).**
+> Update: I wrote a new article about this topic which lets you use zoom and rotation at the same time as scrolling the background infinitely. Check it out [here]({{ "/scrolling-textures-with-zoom-and-rotation" | relative_url }}).**
 {: .info}
 
 ## Method 2 - Camera Modification
@@ -319,7 +319,7 @@ Even better is that if you combine this with the *LookAt* method described above
 > Note: Once again, if you didn't use the "origin trick" before you'll also need to add the origin's X and Y values to the Clamp calculation (inside the Clamp operations, on the min and max parameters).
 {: .note}
 
-> Update: I wrote another article with more information about this matter. Check it out here: [Limiting 2D Camera Movement with Zoom](/limiting-2d-camera-movement-with-zoom).
+> Update: I wrote another article with more information about this matter. Check it out here: [Limiting 2D Camera Movement with Zoom]({{ "/limiting-2d-camera-movement-with-zoom" | relative_url }}).
 {: .info}
 
 **_Q: How do I find what position in the screen (or world) a certain point in the world (or screen) corresponds to?_**

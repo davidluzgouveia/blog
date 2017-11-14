@@ -4,12 +4,12 @@ title: Scrolling Textures in XNA
 date: 2011-03-14
 ---
 
-> Update: I wrote a more advanced version of this article now, which does the same thing but allows the camera to be scaled and rotated too. You can check it out [here](/scrolling-textures-with-zoom-and-rotation).
+> Update: I wrote a more advanced version of this article now, which does the same thing but allows the camera to be scaled and rotated too. You can check it out [here]({{ "/scrolling-textures-with-zoom-and-rotation" | relative_url }}).
 {: .note}
 
 To begin my series of XNA related articles, I've decided to start small and describe a simple technique to scroll textures infinitely in any direction. This technique can be used, for instance, to create an infinite layer of moving clouds for a top-down 2D game with a single texture and draw call. As long as the texture you're drawing is seamless, you can scroll it anyway you want and give the impression of being on an infinite plane. Also, since both the scroll direction and scroll speed are controllable, you can even go ahead as stacking several layers on top of each other and updating them independently to give the feel of parallax scrolling.
 
-![Scrollable Texture](/assets/2011-03-14-scrolling-textures-in-xna/scroll1.png)
+![Scrollable Texture]({{ "/assets/2011-03-14-scrolling-textures-in-xna/scroll1.png" | relative_url }})
 
 Looking at the picture above should give you a clear image of what it means to scroll a texture (note that the texture in the example is *not* seamless intentionally in order to make the scrolling coordinates more apparent).The texture on the left side is unscrolled, while the texture on the right side has been scrolled x units to the right and y units down. So, how does one implement this? The main reason I'm writing this article is because I've used this technique on two games already, and without realizing it took a route that was much harder and error-prone than the one presented here.
 

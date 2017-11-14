@@ -21,7 +21,7 @@ This one was particularly easy to solve. I started by creating a Windows Forms a
 
 There's one catch though. If you're not using the Game class (such as in this case), XNA expects you to call the FrameworkDispatcher.Update() method periodically. I've read that around 20 times a second is enough so I went with that. You also need to call that method at least once before starting audio playback, or your application will crash.
 
-Here's how I solved it. Note: If you're not familiar with XNA's dynamic audio API then check one of my earlier articles such as this: [Creating a Basic Synth in XNA 4.0 - Part II](/creating-a-basic-synth-in-xna-part-ii).
+Here's how I solved it. Note: If you're not familiar with XNA's dynamic audio API then check one of my earlier articles such as this: [Creating a Basic Synth in XNA 4.0 - Part II]({{ "/creating-a-basic-synth-in-xna-part-ii" | relative_url }}).
 
 1. Created a new thread for the audio.
 2. On that new thread, I started by calling FrameworkDispatcher.Update() once.

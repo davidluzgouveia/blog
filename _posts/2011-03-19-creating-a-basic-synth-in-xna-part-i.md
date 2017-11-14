@@ -30,7 +30,7 @@ What exactly is a sound? Sound occurs due to vibrating objects creating pressure
 
 It is also interesting to know in very general terms how most loudspeakers work in order to understand how sound can also be artificially generated. Take a look at the diagram below.
 
-![Loudspeaker Diagram](/assets/2011-03-19-creating-a-basic-synth-in-xna-part-i/speaker-diagram-1-lables-flat-300x272.png)
+![Loudspeaker Diagram]({{ "/assets/2011-03-19-creating-a-basic-synth-in-xna-part-i/speaker-diagram-1-lables-flat-300x272.png" | relative_url }})
 *Loudspeaker Diagram*
 
 The diagram represents a loudpseaker seen from the side, but the circular piece in the middle is known as the diaphragm (or cone). If you look into a set of loudspeakers as they're playing, it's the piece that will be moving around. When an electrical current is fed to the loudpseaker, its mechanism causes the diaphragm to move back and forth on its axis. This in turn modifies the air pressure around it and generates the sort of oscillations that our ears can capture. It makes sense then to think that with the right algorithm to move the diaphragm, it is possible to generate pretty much any sound that we desire. But first we need a way to represent our data.
@@ -39,7 +39,7 @@ The diagram represents a loudpseaker seen from the side, but the circular piece 
 
 As described earlier, the oscillations that generate sound are essentially variations of air pressure over time. In mathematical terms, any sort of disturbance over time is called a wave, and has a very straightforward way of being represented in the form of a graphic of how its amplitude varies with time. The graphic below represents a simple sine (or sinusoidal) wave:
 
-![Sinwave 1](/assets/2011-03-19-creating-a-basic-synth-in-xna-part-i/sin1-300x186.png)
+![Sinwave 1]({{ "/assets/2011-03-19-creating-a-basic-synth-in-xna-part-i/sin1-300x186.png" | relative_url }})
 *Regular Sinewave*
 
 A single sine wave such as this is also referred to as a pure tone because it has only one frequency. On the other hand, most sounds that you hear are extremely complex sounds that result from the sum of many simple pure tones at different frequencies and phases in relation to each other (see [additive synthesis](http://en.wikipedia.org/wiki/Additive_synthesis)).
@@ -48,17 +48,17 @@ I'm assuming that you already have a basic knowledge of wave theory, but if you'
 
 Both the amplitude and the frequency affect the sound significantly, but in very different ways. For instance, the wave represented below has the *same frequency* as the one above, but has a *larger amplitude*. This means that as a sound, it would sound *louder* than the previous one:
 
-![Sinwave 2](/assets/2011-03-19-creating-a-basic-synth-in-xna-part-i/sin2-300x186.png)
+![Sinwave 2]({{ "/assets/2011-03-19-creating-a-basic-synth-in-xna-part-i/sin2-300x186.png" | relative_url }})
 *Louder*
 
 On the other hand, the wave below has the *same amplitude* as the first one, but has a *larger frequency*. This results in a sound with the same volume but an *higher pitch*:
 
-![Sinwave 3](/assets/2011-03-19-creating-a-basic-synth-in-xna-part-i/sin3-300x186.png)
+![Sinwave 3]({{ "/assets/2011-03-19-creating-a-basic-synth-in-xna-part-i/sin3-300x186.png" | relative_url }})
 *Higher Pitch*
 
 Last but not least, we have to recall that most sound waves do not have a perfect sinusoidal shape. In fact, sound waves can have virtually any shape, and each of them will result in an entirely different sound. The figure below shows some common types of waves in sound synthesis (which we will be implementing in part II).
 
-![Soundwaves](/assets/2011-03-19-creating-a-basic-synth-in-xna-part-i/waves1-300x176.png)
+![Soundwaves]({{ "/assets/2011-03-19-creating-a-basic-synth-in-xna-part-i/waves1-300x176.png" | relative_url }})
 *Other Shapes*
 
 ## Wave Implementation
@@ -67,7 +67,7 @@ So now we know that any sound can be represented mathematically in the form of a
 
 If you're trying to represent a wave that you've never done before, then the first step should be to look up a mathematical formula for it. For instance, the [wikipedia article on sine waves](http://en.wikipedia.org/wiki/Sine_wave) shows the following formula:
 
-![Sine Wave Formula](/assets/2011-03-19-creating-a-basic-synth-in-xna-part-i/3376c7ab04fb0c65dbd38782389f09f2.png)
+![Sine Wave Formula]({{ "/assets/2011-03-19-creating-a-basic-synth-in-xna-part-i/3376c7ab04fb0c65dbd38782389f09f2.png" | relative_url }})
 
 Where:
 
@@ -93,12 +93,12 @@ At the very beginning I mentioned that we'll be providing an array of values for
 
 How many samples to take per second (also known as the *sampling rate*) is a decision that will have a large impact on the quality and fidelity of the generated audio. If the sampling rate is too low, then some details of the original signal may be lost when converting to discrete values. According to the Nyquist–Shannon sampling theorem, in order to perfectly reconstruct a signal, the sampling rate needs to be at least twice the maximum frequency of the signal being sampled. Since the average human can't hear anything above the 20.000 Hz frequency range (although some can), the sampling rate used by audio CDs (44.100 Hz) is usually more than enough for all general usages.
 
-![Sampling Rate](/assets/2011-03-19-creating-a-basic-synth-in-xna-part-i/Screen1-300x286.gif)
+![Sampling Rate]({{ "/assets/2011-03-19-creating-a-basic-synth-in-xna-part-i/Screen1-300x286.gif" | relative_url }})
 *Sampling Rate*
 
 ## Conclusions
 
 This concludes the first part of this series of articles. Next time we'll be putting these concepts to use and making all of these types of waveforms ring using the XNA 4.0 Framework. Besides revisiting the sampling rate describe here, we'll also see some other important aspects of audio playback such as bit depth, audio channels, latency and buffer size. See you again soon!
 
-[Continue To Part II](/creating-a-basic-synth-in-xna-part-ii)
+[Continue To Part II]({{ "/creating-a-basic-synth-in-xna-part-ii" | relative_url }})
 {: .button}

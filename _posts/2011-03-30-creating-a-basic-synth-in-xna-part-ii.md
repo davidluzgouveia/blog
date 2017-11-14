@@ -4,9 +4,9 @@ title: Creating a Basic Synth in XNA 4.0 - Part II
 date: 2011-03-30
 ---
 
-Hello folks, and welcome to part II of my *[Creating a Basic Synth in XNA 4.0](/creating-a-basic-synth-in-xna-part-i)* series!
+Hello folks, and welcome to part II of my *[Creating a Basic Synth in XNA 4.0]({{ "/creating-a-basic-synth-in-xna-part-i" | relative_url }})* series!
 
-This time I'll be covering the *DynamicSoundEffectInstance* class and how to put some of the concepts we discussed earlier into practice. Therefore (if you haven't done so already) I recommend that you read [part I](/creating-a-basic-synth-in-xna-part-i) before proceeding. I'd also like to warn you that this article will be quite long. The good news is that this is the hardest part for a beginner to overcome, and future articles on this series will probably be smaller and in general easier to grasp.
+This time I'll be covering the *DynamicSoundEffectInstance* class and how to put some of the concepts we discussed earlier into practice. Therefore (if you haven't done so already) I recommend that you read [part I]({{ "/creating-a-basic-synth-in-xna-part-i" | relative_url }}) before proceeding. I'd also like to warn you that this article will be quite long. The good news is that this is the hardest part for a beginner to overcome, and future articles on this series will probably be smaller and in general easier to grasp.
 
 By the way, there's a video sample at the end of the article in case you'd like to see it in action before you start reading!
 
@@ -63,7 +63,7 @@ Besides these two parameters, there are also a couple things that you do not hav
 ### Audio Format
 We've just seen that XNA forces a signed 16-bit integer bit depth. That's only one part of the audio format, namely the one which specifies how each audio sample is represented. But we've also seen that by choosing a Stereo configuration you can have two audio channels playing simultaneously. The samples for each audio channel will have to be packed into the same buffer, so how are they organized in relation to each other? Well, when you have only one audio channel, each sample is simply stored in the buffer in same the order they appear. But if you have two audio channels, then it's a different story. Instead, you'll have to interleave one audio sample from the left channel with one audio sample from the right channel, and repeat until there are no more samples left (i.e. LRLRLRLRLR etc.). Naturally, you'll also be needing a buffer with twice the size in order to fit all the samples there. I'll touch this subject again when describing how to create the audio buffers.
 
-![Sample Rate](/assets/2011-03-30-creating-a-basic-synth-in-xna-part-ii/Screen11-300x286.gif)
+![Sample Rate]({{ "/assets/2011-03-30-creating-a-basic-synth-in-xna-part-ii/Screen11-300x286.gif" | relative_url }})
 *Sample Rate (Horizontal) and Bit Depth (Vertical)*
 
 Okay, now that you understand most of the necessary concepts, let's start putting it to practice and create that *DynamicSoundEffectInstance* object. I'll be working with a sample rate of 44.100 Hz and Stereo audio for the rest of this article, since it covers most of the edge cases. Here's the code for this step:
@@ -121,7 +121,7 @@ XNA Buffer = byte[ChannelsCount * SamplesPerBuffer * 2]
 
 I created this image that should help you visualize better how the two buffers are related. The buffer in the middle is never really created, but serves to illustrate how we need to convert our samples from floats/doubles to shorts, before splitting them up into bytes (click to see in full size).
 
-[![Audio Buffers](/assets/2011-03-30-creating-a-basic-synth-in-xna-part-ii/order-300x260.png)](/assets/2011-03-30-creating-a-basic-synth-in-xna-part-ii/order.png)
+[![Audio Buffers]({{ "/assets/2011-03-30-creating-a-basic-synth-in-xna-part-ii/order-300x260.png" | relative_url }})]({{ "/assets/2011-03-30-creating-a-basic-synth-in-xna-part-ii/order.png" | relative_url }})
 *Audio Buffers*
 
 That's all there is to it. As long as you create these arrays with the right size and format, you should be okay. Here's the code:
@@ -266,7 +266,7 @@ _instance.Play();
 
 ## Sample
 
-Here's a sample video and source code showing everything described in this article put into practice. You'll probably notice that there's many different types of waves being generated (sine, square, pulse, triangle, sawtooth, noise). Since this article became big enough as it is, I'll be covering those in a [separate article dedicated to describing the Oscillator class](/about-oscillators) I'm using on the sample. An oscillator is basically a device that creates wave signals for you. Don't worry, it's not complicated at all compared to what we already did.
+Here's a sample video and source code showing everything described in this article put into practice. You'll probably notice that there's many different types of waves being generated (sine, square, pulse, triangle, sawtooth, noise). Since this article became big enough as it is, I'll be covering those in a [separate article dedicated to describing the Oscillator class]({{ "/about-oscillators" | relative_url }}) I'm using on the sample. An oscillator is basically a device that creates wave signals for you. Don't worry, it's not complicated at all compared to what we already did.
 
 <iframe width="420" height="315" src="//www.youtube.com/embed/nsg7-5TXgAg?rel=0" frameborder="0" allowfullscreen=""></iframe>
 
@@ -280,7 +280,7 @@ That's it! I know it was long, but by now you hopefully have an annoying buzzing
 * You can't play more than one sound at once (like a piano, i.e. we lack polyphony).
 * You can't control the note's durations (i.e. when they start and stop, etc)
 
-These are the two questions that I'll address in part III of the series, which will show you how to create a little playable "piano" with dynamically generated audio. It will also describe how to start shaping all of this code into a framework so that we can have more flexibility to add new sounds, effects and other goodies in the future. Meanwhile, be sure to also check [my article about oscillators](/about-oscillators) in sound synthesis. Until then!
+These are the two questions that I'll address in part III of the series, which will show you how to create a little playable "piano" with dynamically generated audio. It will also describe how to start shaping all of this code into a framework so that we can have more flexibility to add new sounds, effects and other goodies in the future. Meanwhile, be sure to also check [my article about oscillators]({{ "/about-oscillators" | relative_url }}) in sound synthesis. Until then!
 
-[Continue To Part III](/creating-a-basic-synth-in-xna-part-iii)
+[Continue To Part III]({{ "/creating-a-basic-synth-in-xna-part-iii" | relative_url }})
 {: .button}

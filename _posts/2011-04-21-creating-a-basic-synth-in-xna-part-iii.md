@@ -4,9 +4,9 @@ title: Creating a Basic Synth in XNA 4.0 - Part III
 date: 2011-04-21
 ---
 
-Hello! This is the third and final part of my [Creating a Basic Synth in XNA 4.0](/creating-a-basic-synth-in-xna-part-i) series. Don't worry though, since I intend to write some more about this subject in the future, but since the topics I expect to cover will start getting more advanced, I'll make them into a separate series.
+Hello! This is the third and final part of my [Creating a Basic Synth in XNA 4.0]({{ "/creating-a-basic-synth-in-xna-part-i" | relative_url }}) series. Don't worry though, since I intend to write some more about this subject in the future, but since the topics I expect to cover will start getting more advanced, I'll make them into a separate series.
 
-In [part II](/creating-a-basic-synth-in-xna-part-ii) I've shown how to use the *DynamicSoundEffectInstance* class in order to to continuously play any single sound signal that we were capable of generating. I also wrote a separate article about [oscillators](/about-oscillators) (which you should also read if you haven't done so already) which describes a simple class which takes care of generating some of the most common types of synthesized sounds.
+In [part II]({{ "/creating-a-basic-synth-in-xna-part-ii" | relative_url }}) I've shown how to use the *DynamicSoundEffectInstance* class in order to to continuously play any single sound signal that we were capable of generating. I also wrote a separate article about [oscillators]({{ "/about-oscillators" | relative_url }}) (which you should also read if you haven't done so already) which describes a simple class which takes care of generating some of the most common types of synthesized sounds.
 
 Now it's time to bring it all together and build a little interactive synthesizer that we can play like a piano on our keyboard keys! But for that, there are two major problems that we need to address:
 
@@ -19,7 +19,7 @@ This time I probably won't be able to cover every bit of code used in the articl
 
 The architecture of the synthesizer I created for this article is divided into three classes or components. You can see them on the image below:
 
-[![The Building Blocks](/assets/2011-04-21-creating-a-basic-synth-in-xna-part-iii/synthdiagram1.png)](/assets/2011-04-21-creating-a-basic-synth-in-xna-part-iii/synthdiagram1.png)
+[![The Building Blocks]({{ "/assets/2011-04-21-creating-a-basic-synth-in-xna-part-iii/synthdiagram1.png" | relative_url }})]({{ "/assets/2011-04-21-creating-a-basic-synth-in-xna-part-iii/synthdiagram1.png" | relative_url }})
 *The Building Blocks*
 
 What this diagram represents is that we'll haves a *Synth* class with a bunch of *Voice* objects inside. You can think of a *Voice* object as being something that encapsulates a single individual sound, and provides some control over it. Unsurprisingly, the number of *Voice* objects created determine how many sounds the *Synth* can play at the same time, or in other words its polyphony.
@@ -33,7 +33,7 @@ So, how do we solve the problems of polyphony and time control using this archit
 
 The Synth class deserves some special attention because of all the different things it will be doing. Let's start with an image of its internals:
 
-[![Synth Architecture](/assets/2011-04-21-creating-a-basic-synth-in-xna-part-iii/synthdiagram21.png)](/assets/2011-04-21-creating-a-basic-synth-in-xna-part-iii/synthdiagram21.png)
+[![Synth Architecture]({{ "/assets/2011-04-21-creating-a-basic-synth-in-xna-part-iii/synthdiagram21.png" | relative_url }})]({{ "/assets/2011-04-21-creating-a-basic-synth-in-xna-part-iii/synthdiagram21.png" | relative_url }})
 *Synth Architecture*
 
 The **Audio Engine** bit is exactly what was described in part II of the series. It creates a DynamicSoundEffectInstance object plus a couple of buffers, and links everything together, taking care of submiting a new audio buffer when needed. The only big difference is that here the audio engine will loop over all active voices and delegate the task of modifying the audio buffers to them.
@@ -52,7 +52,7 @@ Okay, enough of the architecture. I'll jump straight into some code now. I'll tr
 
 ## Step 1: The Oscillator Class
 
-I'll start with the simplest step which is generating the audio signal. I've already talked about this subject [before](/about-oscillators). Basically we'll create a class called Oscillator whose sole purpose is to generate audio signals of different types.
+I'll start with the simplest step which is generating the audio signal. I've already talked about this subject [before]({{ "/about-oscillators" | relative_url }}). Basically we'll create a class called Oscillator whose sole purpose is to generate audio signals of different types.
 
 But in comparison with the Oscillator class I described earlier, I made a few modifications this time to make it a bit easier to understand:
 
@@ -157,7 +157,7 @@ At the end of this article I'll show an upgraded version of the Voice class whic
 
 ## Step 3: The Synth Class
 
-A large part of the Synth class is the low-level audio engine management that I've described in [part II](/creating-a-basic-synth-in-xna-part-ii), so I'll skip right over those and only talk about the significant changes.
+A large part of the Synth class is the low-level audio engine management that I've described in [part II]({{ "/creating-a-basic-synth-in-xna-part-ii" | relative_url }}), so I'll skip right over those and only talk about the significant changes.
 
 To start with, there's the four data structures that are used to manage all of the voices. They're all initialized in the constructor of the class. First, we create an array of voices (sized Polyphony) which will be our voice pool. This is the only point in our application where we will be instantiating Voice objects - after that it's just references to existing objects being moved around. Next is the stack of free voices, which initially contains all of the voices in the pool. Then there's a list of active voices, which starts out empty, and is used to keep all the voices that are playing at any given moment. Finally we keep a dictionary linking notes (which in this sample will be an integer value with 0 corresponding to C4, and moving up and down in semi-tones) to the voices they correspond to. This is necessary when we tell the synth to stop playing a note, so that it can delegate the order to the appropriate voice.
 
@@ -273,17 +273,17 @@ This is actually one of the subjects I want to treat in more detail in a later a
 
 Doing these changes has a few interesting implications in our synth. The graphics below describe in general terms how the volume of our sounds vary with time, and help correlate them with the NoteOn and NoteOff commands that we issue. Initially, before adding fading to our Voice class, what we had was something like this:
 
-[![Without Attack/Release](/assets/2011-04-21-creating-a-basic-synth-in-xna-part-iii/envelope1.png)](/assets/2011-04-21-creating-a-basic-synth-in-xna-part-iii/envelope1.png)
+[![Without Attack/Release]({{ "/assets/2011-04-21-creating-a-basic-synth-in-xna-part-iii/envelope1.png" | relative_url }})]({{ "/assets/2011-04-21-creating-a-basic-synth-in-xna-part-iii/envelope1.png" | relative_url }})
 *Without Attack/Release*
 
 Each voice was alive only during the time between our NoteOn and NoteOff, and the changes in volume were abrupt. Now with these changes, we have something like this instead:
 
-[![With Attack/Release](/assets/2011-04-21-creating-a-basic-synth-in-xna-part-iii/envelope2.png)](/assets/2011-04-21-creating-a-basic-synth-in-xna-part-iii/envelope2.png)
+[![With Attack/Release]({{ "/assets/2011-04-21-creating-a-basic-synth-in-xna-part-iii/envelope2.png" | relative_url }})]({{ "/assets/2011-04-21-creating-a-basic-synth-in-xna-part-iii/envelope2.png" | relative_url }})
 *With Attack/Release*
 
 See how the note remains alive for a bit even after the NoteOff command? And finally, there's a special case I'd like to talk about. What happens if your NoteOff command happens *before* the attack phase ends? In that case we should skip the sustain phase completely, and start reversing the volume back to 0 from the point it was currently at:
 
-[![Special Case](/assets/2011-04-21-creating-a-basic-synth-in-xna-part-iii/envelope3.png)](/assets/2011-04-21-creating-a-basic-synth-in-xna-part-iii/envelope3.png)
+[![Special Case]({{ "/assets/2011-04-21-creating-a-basic-synth-in-xna-part-iii/envelope3.png" | relative_url }})]({{ "/assets/2011-04-21-creating-a-basic-synth-in-xna-part-iii/envelope3.png" | relative_url }})
 *Special Case*
 
 ## Conclusions

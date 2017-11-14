@@ -31,7 +31,7 @@ The pathfinding algorithm used in the video is really just a regular A*. I recom
 
 As an example, here's a simpler polygon than the one in the video. I've marked all the concave vertices with a circle, and you can also see the connections between each of them. This is all you need to be able to walk over the polygon!
 
-[![VisibilityGraph](/assets/2011-05-20-pathfinding-on-a-2d-polygonal-map/VisibilityGraph.png)](/assets/2011-05-20-pathfinding-on-a-2d-polygonal-map/VisibilityGraph.png)
+[![VisibilityGraph]({{ "/assets/2011-05-20-pathfinding-on-a-2d-polygonal-map/VisibilityGraph.png" | relative_url }})]({{ "/assets/2011-05-20-pathfinding-on-a-2d-polygonal-map/VisibilityGraph.png" | relative_url }})
 
 This sort of graph is usually referred to as a visibility graph, and because of that, the pathfinding method I used is also known as points-of-visibility pathfinding. You can read more about it in the first two Game Programming Gems books, on the articles "The Basics of A* for Path Planning" and "Expanded Geometry for Points-of-Visibility Pathfinding" respectively. The graph could still be optimized to remove a lot of redundant edges that will never be needed to move around obstacles, but I left that for a later stage since I'm not running into any performance issues at the moment.
 
@@ -46,7 +46,7 @@ With your graph structure created, you can apply the A* algorithm over it by fol
 
 Taking the graph from earlier, this process could be represented as something like:
 
-[![VisibilityGraph2](/assets/2011-05-20-pathfinding-on-a-2d-polygonal-map/VisibilityGraph2.png)](/assets/2011-05-20-pathfinding-on-a-2d-polygonal-map/VisibilityGraph2.png)
+[![VisibilityGraph2]({{ "/assets/2011-05-20-pathfinding-on-a-2d-polygonal-map/VisibilityGraph2.png" | relative_url }})]({{ "/assets/2011-05-20-pathfinding-on-a-2d-polygonal-map/VisibilityGraph2.png" | relative_url }})
 
 Where the red and green dots are the start and end nodes which have been added to the graph, and linked to every other node they can see (the green lines). Then a path is taken from this new graph (the light blue line).
 

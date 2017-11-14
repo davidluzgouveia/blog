@@ -10,7 +10,7 @@ I have just started creating a level editor with Windows Forms that uses XNA for
 
 So, I downloaded the sample, inherited my scene rendering control from the *GraphicsDeviceControl* class, and wrote my own *Initialize* and *Draw* methods. Everything seemed to work okay! However, once I tried adding my control as a child of another control (in this case, a simple panel) the Visual Studio's designer could no longer display my form. Here's what I got:
 
-![Error Message](/assets/2011-03-22-problems-with-designmode-in-winforms/error2.png)
+![Error Message]({{ "/assets/2011-03-22-problems-with-designmode-in-winforms/error2.png" | relative_url }})
 
 The error message hinted that even though I was in designer mode, Visual Studio was *still* calling my *Initialize* method along with all of the content loading that was happening there.
 

@@ -4,7 +4,7 @@ title: Limiting 2D Camera Movement with Zoom
 date: 2011-09-10
 ---
 
-On my [2D Camera with Parallax Scrolling in XNA](/2d-camera-with-parallax-scrolling-in-xna) article, one of the topics I described down in the FAQ section was how to limit the range of movement of a 2D camera so that only part of the game world may be seen.
+On my [2D Camera with Parallax Scrolling in XNA]({{ "/2d-camera-with-parallax-scrolling-in-xna" | relative_url }}) article, one of the topics I described down in the FAQ section was how to limit the range of movement of a 2D camera so that only part of the game world may be seen.
 
 I implemented it as a simple optional rectangle property called Limits which restricted camera movement so that the player could not see anything beyond that region.
 
