@@ -54,7 +54,7 @@ float4 ps_main(VS_OUTPUT input) : COLOR0
 
 And what it's supposed to look like:
 
-[![0](/assets/2011-09-11-rendermonkey-beginners-tutorial/0-300x213.jpg)](/assets/2011-09-11-rendermonkey-beginners-tutorial/0.jpg)
+[![0]({{ "/assets/2011-09-11-rendermonkey-beginners-tutorial/0-300x213.jpg" | relative_url }})]({{ "/assets/2011-09-11-rendermonkey-beginners-tutorial/0.jpg" || relative_url }})
 
 So let's get started!
 
