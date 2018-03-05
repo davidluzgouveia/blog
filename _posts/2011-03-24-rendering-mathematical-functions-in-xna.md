@@ -144,5 +144,5 @@ You can see the sample in action in the video below, or download the source code
 
 <iframe width="420" height="315" src="//www.youtube.com/embed/L7gNC9qQ8Ek?rel=0" frameborder="0" allowfullscreen=""></iframe>
 
-[Source Code](https://github.com/davidluzgouveia/MathFunction)
+[Source Code](https://github.com/davidluzgouveia/blog-math-function)
 {: .button}
