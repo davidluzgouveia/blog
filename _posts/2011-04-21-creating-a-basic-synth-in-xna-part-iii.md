@@ -292,7 +292,7 @@ And that's all for today! I hope you enjoyed the series, and feel free to leave 
 
 <iframe width="420" height="315" src="//www.youtube.com/embed/qza5GrHMD-w?rel=0" frameborder="0" allowfullscreen=""></iframe>
 
-[Source Code](https://github.com/davidluzgouveia/SimpleSynth)
+[Source Code](https://github.com/davidluzgouveia/blog-simple-synth)
 {: .button}
 
 > Note: You can disregard the Piano class. It's just a hack I threw together to render a simple piano keyboard procedurally.
