@@ -171,5 +171,5 @@ technique Infinite
 }
 ~~~
 
-[Source Code](https://github.com/davidluzgouveia/InfiniteLayer)
+[Source Code](https://github.com/davidluzgouveia/blog-infinite-layer)
 {: .button}
