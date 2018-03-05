@@ -145,5 +145,5 @@ _camera.Limits = new Rectangle(0, 0, 512, 512);
 
 No matter how big or small your Viewport and Limits rectangle currently are, the camera's position and zoom are initialized so that the player is guaranteed to only see the inside of that region. As you saw on the video earlier, I cycle through rectangles of many different sizes and locations and the camera is automatically updated to focus on that content.
 
-[Source Code](https://github.com/davidluzgouveia/CameraLimiting)
+[Source Code](https://github.com/davidluzgouveia/blog-camera-limiting)
 {: .button}
