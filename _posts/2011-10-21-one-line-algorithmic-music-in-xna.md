@@ -195,5 +195,5 @@ Here's a video of the final result as usual, and the source code:
 
 <iframe width="420" height="315" src="//www.youtube.com/embed/vvcALTJf-OQ?rel=0" frameborder="0" allowfullscreen=""></iframe>
 
-[Source Code](https://github.com/davidluzgouveia/MusicAlgorithm)
+[Source Code](https://github.com/davidluzgouveia/blog-music-algorithm)
 {: .button}
