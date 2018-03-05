@@ -270,7 +270,7 @@ Here's a sample video and source code showing everything described in this artic
 
 <iframe width="420" height="315" src="//www.youtube.com/embed/nsg7-5TXgAg?rel=0" frameborder="0" allowfullscreen=""></iframe>
 
-[Source Code](https://github.com/davidluzgouveia/DynamicSound)
+[Source Code](https://github.com/davidluzgouveia/blog-dynamic-sound)
 {: .button}
 
 ## Conclusions
