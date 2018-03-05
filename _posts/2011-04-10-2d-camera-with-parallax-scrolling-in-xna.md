@@ -344,5 +344,5 @@ This will get you the correct results, even if your camera is all rotated and sc
 
 That's all for this article. If you have any questions that I didn't cover here, leave a comment below and I'll do my best to answer them and update the FAQ accordingly. And as usual, you can find the source code for this article's sample below. The camera class provided has all of the tips I described implemented, and I also included a SimpleCamera class (although I'm not using it) which is the bare minimum you need to get things working.
 
-[Source Code](https://github.com/davidluzgouveia/ParallaxScrolling)
+[Source Code](https://github.com/davidluzgouveia/blog-parallax-scrolling)
 {: .button}
