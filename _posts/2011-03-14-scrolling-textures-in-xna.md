@@ -82,5 +82,5 @@ Finally, here's a small video showing texture scrolling in action. The demo has 
 
 <iframe width="420" height="315" src="//www.youtube.com/embed/Ly7SJeiirhU?rel=0" frameborder="0" allowfullscreen=""></iframe>
 
-[Source Code](https://github.com/davidluzgouveia/ScrollableTextures)
+[Source Code](https://github.com/davidluzgouveia/blog-scrollable-textures)
 {: .button}
